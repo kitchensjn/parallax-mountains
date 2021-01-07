@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    {%- include head.html -%}
+
+    <body>
+
+        {%- include navbar.html -%}
+
+        <div style="padding: 75px 10% 75px 10%; text-align: justify;">
+            
+            {%- include post-info.html -%}
+
+            {% if page.title == "National Parks Gallery" %}
+                {%- include national-parks-gallery.html -%}
+            {% endif %}
+
+            {{ content }}
+
+        </div>
+
+        {%- include contactbar.html -%}
+
+    </body>
+
+</html>

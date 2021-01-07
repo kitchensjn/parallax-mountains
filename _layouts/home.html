@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {%- include head.html -%}
+
+    <body>
+        
+        {%- include navbar.html -%}
+
+        {%- include home.html -%}
+
+        {%- include bio.html -%}
+
+        {% if site.projects.size > 0 %}
+            {%- include projects.html -%}
+        {% endif %}
+
+        {% if site.blog.size > 0 %}
+            {%- include blog.html -%}
+        {% endif %}
+        
+        {%- include contactbar.html -%}
+        
+    </body>
+
+</html>

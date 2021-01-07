@@ -1,0 +1,14 @@
+<div id="home" class="home">
+    <div id="background"></div>
+    <div class="textbox">
+        <h1 class="title">{{ site.name }}</h1>
+        <p class="desc">{{ site.job_title }}</p>
+        <div class="links">
+            {% for link in site.social_links %}
+                <a target="_blank" href="{{ link.link | relative_url }}">
+                    <i class="{{ link.icon }} link" title="{{ link.name }}"></i>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

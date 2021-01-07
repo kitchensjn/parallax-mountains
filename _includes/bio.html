@@ -1,0 +1,24 @@
+<div id="bio" class="page">
+    {% if page.bio.size > 0 %}
+        {{ page.bio | strip | markdownify }}
+    {% endif %}
+    {% if page.skills.size > 0 %}
+        <div style="margin: 50px 0px;">
+            {% for skillset in page.skills %}
+                <div class="cat" style="text-align: center; margin: 2.5px 0px;">
+                    {% for skill in skillset %}
+                        <div class="background">
+                            <p class="skill">{{ skill }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if page.publications.size > 0 %}
+        <h2>Publications</h2>
+        {% for pub in page.publications %}
+            <p><b>{{forloop.rindex}}. </b>{{ pub }}</p>
+        {% endfor %}
+    {% endif %}
+</div>
