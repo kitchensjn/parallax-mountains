@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "parallax-mountains"
-  spec.version       = "0.1.3"
+  spec.version       = "0.1.4"
   spec.authors       = ["James Kitchens"]
   spec.email         = ["kitchensjn@gmail.com"]
 
