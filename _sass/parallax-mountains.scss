@@ -152,17 +152,6 @@ p {
     display: none;
 }
 
-@media screen and (max-width: 991px) {
-    .placeholder {
-        display: none;
-        padding: 0px;
-    }
-    
-    .placeholder .card {
-        cursur: initial;
-    }
-}
-
 @media screen and (max-width: 868px) {
     .topnav .menuPage:not(:first-child) {
         display: none;
@@ -325,7 +314,6 @@ p {
 }
 
 
-
 /* Blog */
 #blog .post {
     padding: 0px;
@@ -422,7 +410,16 @@ p {
     display: block;
 }
 
-
+@media screen and (max-width: 991px) {
+    .placeholder {
+        display: none;
+        padding: 0px;
+    }
+    
+    .placeholder .card {
+        cursur: initial;
+    }
+}
 
 /* Blog Post */
 

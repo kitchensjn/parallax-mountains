@@ -18,9 +18,11 @@ publications:
 
 categories:
   projects:
-    rows_to_show: 1
-    posts_per_row: 3
+    rows_to_show: 2
+    posts_per_row: 2
+    template: "cards/projects.html"
   blog:
     rows_to_show: 1
-    posts_per_row: 3
+    posts_per_row: 2
+    template: "cards/blog.html"
 ---
