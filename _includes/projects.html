@@ -1,56 +1,62 @@
-{% assign to_show = 4 %}
+{% assign to_show = 2 %}
 
-<div id="projects" class="section">
-    <h1 style="text-align: center;">Projects</h1>
+<div id="blog" class="section">
+    <h1 style="text-align: center;">Blog</h1>
     
-    {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
-    {% for project in sorted_projects %}
+    {% assign sorted_posts = site.blog | sort: 'date' | reverse %}
+    {% for post in sorted_posts %}
         {% if forloop.index <= to_show %}
             <div class="col-md-6 col-lg-6" style="padding: 0px;">
         {% else %}
-            <div class="col-md-6 col-lg-6 hideProject" style="padding: 0px;">
+            <div class="col-md-6 col-lg-6 hidePost" style="padding: 0px;">
         {% endif %}
-                <div class="card" style="background-image: url('{{ project.thumbnail | relative_url }}');">
-                    <div class="overlay">
-                        <div class="content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%;">
-                            <h2 class="name" style="color: #FFFFFF; text-align: center;">{{ project.title }}</h2>
-                            <div class="desc">
-                                <div class="links" style="text-align: center; font-size: 2em; padding: 10px 0px;">
-                                    {% for link in project.links %}
-                                        <a target="_blank" href="{{ link.link | relative_url }}" style="padding: 0px 5px;">
-                                            <i class="{{ link.icon }} link" title="{{ link.name }}"></i>
-                                        </a>
-                                    {% endfor %}
-                                </div>
-                                <p>{{ project.short_desc }}</p>
+                <div class="post">
+                    <div class="postimg" style="background-image: url('{{ post.thumbnail  | relative_url }}');">
+                        <div class="info">
+                            <p class="title">{{ post.title }}</p>
+                            <p class="date">{{ post.date | date: "%B %-d, %Y"}}</p>
+                            <p class="desc">{{ post.desc }}</p>
+                            <div class="cat">
+                                {% for skill in post.skills %}
+                                    <div class="background">
+                                        <p class="skill">{{ skill }}</p>
+                                    </div>
+                                {% endfor %}
                             </div>
                         </div>
+                        <a href="{{ post.link | relative_url }}" class="overlay">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 6em; color: #FFFFFF;">
+                                <i class="fas fa-book-open" title="Website"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
     {% endfor %}
 
-    {% assign value = site.projects.size | modulo:2 %}
+    {% assign value = site.blog.size | modulo:2 %}
     {% if value != 0 %}
         {% if site.blog.size > 2 %}
-            <div id="placeholderPost" class="col-md-6 col-lg-6 hideProject" style="padding: 0px;">
+            <div id="placeholderPost" class="col-md-6 col-lg-6 hidePost" style="padding: 0px;">
         {% else %}
-            <div id="placeholderPost" class="col-md-6 col-lg-6 hideProject" style="padding: 0px;">
+            <div id="placeholderPost" class="col-md-6 col-lg-6" style="padding: 0px;">
         {% endif %}
-                <div class="card" style="cursur: initial;"></div>
+                <div class="post">
+                    <div class="postimg" style="cursor: initial;"></div>
+                </div>
             </div>
     {% endif %}
-    
+        
     <div style="width: 100%; text-align: center;">
-        {% if site.projects.size > to_show %}
-            <a style="font-size: 2em;" id="ProjectArrow" href="javascript:void(0);" onclick="projectArrow()">
-                <i class="fas fa-chevron-down arrow" id="arrowProject"></i>
+        {% if site.blog.size > to_show %}
+            <a style="font-size: 2em;" id="PostArrow" href="javascript:void(0);" onclick="postArrow()">
+                <i class="fas fa-chevron-down arrow" id="arrowPost"></i>
             </a>
         {% else %}
             <a style="font-size: 2em;">
-                <i class="fas fa-chevron-down arrow" style="color: #BBBBBB;"></i>
+                <i class="fas fa-chevron-down arrow" style="color: #ffffff;"></i>
             </a>
         {% endif %}
     </div>
-    
+
 </div>
