@@ -18,5 +18,4 @@ collections:
   blog:
     output: true
   projects:
-
-theme: "parallax-mountains"
+    output: true
