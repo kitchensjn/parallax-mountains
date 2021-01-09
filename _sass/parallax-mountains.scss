@@ -188,9 +188,6 @@ p {
         background-color: #337ab7;
         color: #333333;
     }
-    .contactBar .infoHide {
-        display: none;
-    }
 }
 
 .postTitle {
@@ -532,6 +529,12 @@ ul {
 .contactBar .info{
     display: inline-block;
     padding: 17px 20px;
+}
+
+@media screen and (max-width: 868px) {
+    .contactBar .infoHide {
+        display: none;
+    }
 }
 
 .unstick {
