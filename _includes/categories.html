@@ -1,0 +1,47 @@
+{% for category in site.categories %}
+    {% capture section_color %}{% cycle '#BBBBBB', '#FFFFFF' %}{% endcapture %}
+    {% assign rows_to_show = 1 %}
+    {% assign per_row = 2 %}
+    {% assign to_show = rows_to_show | times:per_row %}
+    <div id="{{ category[0] }}" class="section" style="background-color: {{ section_color }};">
+        <h1 style="text-align: center;">{{ category[0] | capitalize }}</h1>
+        {% for post in category[1] %}
+            {% if forloop.index > to_show %}
+                <div class="post col-md-{{ 12 | divided_by:per_row }} col-lg-{{ 12 | divided_by:per_row }} hide{{ category[0] | capitalize }}">
+            {% else %}
+                <div class="post col-md-{{ 12 | divided_by:per_row }} col-lg-{{ 12 | divided_by:per_row }}">
+            {% endif %}
+                    {% if category[0] == 'projects' %}
+                        {%- include card-project.html -%}
+                    {% else %}
+                        {%- include card-blog.html -%}
+                    {% endif %}
+                </div>
+        {% endfor %}
+        {% assign need_placeholder = category[1].size | modulo:per_row %}
+        {% if need_placeholder != 0 %}
+            {% assign number_of_placeholders = per_row | minus:need_placeholder %}
+            {% for placeholder in (1..number_of_placeholders) %}
+                {% if category[1].size > to_show %}
+                    <div class="post placeholder col-md-{{ 12 | divided_by:per_row }} col-lg-{{ 12 | divided_by:per_row }} hide{{ category[0] | capitalize }}">
+                {% else %}
+                    <div class="post placeholder col-md-{{ 12 | divided_by:per_row }} col-lg-{{ 12 | divided_by:per_row }}">
+                {% endif %}
+                        <div class="card"></div>
+                    </div>
+            {% endfor %}
+        {% endif %}
+        
+        <div style="width: 100%; text-align: center;">
+            {% if category[1].size > to_show %}
+                <a style="font-size: 2em;" id="{{ category[0] | capitalize }}Arrow" href="javascript:void(0);" onclick="{{ category[0] }}Arrow()">
+                    <i class="fas fa-chevron-down arrow" id="arrow{{ category[0] | capitalize }}"></i>
+                </a>
+            {% else %}
+                <a style="font-size: 2em;">
+                    <i class="fas fa-chevron-down arrow" style="color: {{ section_color }};"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
