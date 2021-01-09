@@ -15,4 +15,12 @@ publications:
   - Whipple, A.L., C. Ray, et al. Temporal analysis of fecal glucocorticoid metabolites to explore variation within and among territories of a climate-sensitive small mammal. <i>Conservation Physiology</i> (submitted).
   - Kim et al. An evaluation of remotely sensed and in-situ data sufficiency for SGMA-scale groundwater studies in the Central Valley, California. <i>Journal of the American Water Resources Association</i> (accepted).
   - Webb et al. (2017) <a href="https://www.frontiersin.org/articles/10.3389/fgene.2017.00030/full" target="_blank">Molecular Genetic Influences on Normative and Problematic Alcohol Use in a Population-Based Sample of College Students</a>. <i>Frontiers in Genetics</i>, 8
+
+categories:
+  projects:
+    rows_to_show: 2
+    posts_per_row: 2
+  blog:
+    rows_to_show: 1
+    posts_per_row: 2
 ---
