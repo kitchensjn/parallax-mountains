@@ -15,6 +15,6 @@ sass:
   style: compressed
 
 collections:
-  projects:
-  blog:
-    output: true
+  - projects:
+  - blog:
+      output: true
