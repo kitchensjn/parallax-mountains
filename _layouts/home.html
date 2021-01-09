@@ -9,6 +9,15 @@
 
         {%- include home.html -%}
 
+        {% for category in site.categories %}
+            <div id="{{ category[0] }}" class="section">
+                <h1 style="text-align: center;">{{ category[0] | capitalize }}</h1>
+                    {% for post in category[1] %}
+                        {{ post.title }}
+                    {% endfor %}
+            </div>
+        {% endfor %}
+
         {%- include bio.html -%}
 
         {% if site.projects.size > 0 %}

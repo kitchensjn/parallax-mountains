@@ -13,8 +13,3 @@ phone: "(804) 572-3197"
 sass:
   sass_dir: _sass
   style: compressed
-
-collections:
-  blog:
-    output: true
-  projects:
