@@ -46,8 +46,8 @@ function draw() {
   vertex(width, height);
   endShape();
   
-  fill(51,121,183,255);
-  stroke(51,121,183);
+  fill(51,122,183,255);
+  stroke(51,122,183);
   beginShape();
   vertex(0, height);
   for (var x = 0; x <= numberPoints; x++) {

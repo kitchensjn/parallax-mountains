@@ -27,44 +27,48 @@ window.addEventListener('scroll', function(event){
     }
   });
 
-function projectArrow(id) {
-    var x = document.getElementById("arrowProject");
+function projectsArrow(id) {
+    var x = document.getElementById("arrowProjects");
     if (x.className == "fas fa-chevron-down arrow") {
         x.classList.add("flip");
     } else {
         x.className = "fas fa-chevron-down arrow";
     }
-    var p = document.querySelectorAll(".hideProject");
-    var q = document.querySelectorAll(".unhideProject");
+    var p = document.querySelectorAll(".hideProjects");
+    var q = document.querySelectorAll(".unhideProjects");
     var j;
     for (j = 0; j < p.length; j++) {
-        p[j].className = "col-md-6 col-lg-6 unhideProject";
+        p[j].classList.remove("hideProjects");
+        p[j].classList.add("unhideProjects");
     }
     var k;
     for (k = 0; k < q.length; k++) {
-        q[k].className = "col-md-6 col-lg-6 hideProject";
+        q[k].classList.remove("unhideProjects");
+        q[k].classList.add("hideProjects");
     }
     if (q.length > 0) {
         $('html,body').animate({scrollTop: $("#projects").offset().top},'fast'); 
     }
 }
   
-function postArrow(id) {
-    var x = document.getElementById("arrowPost");
+function blogArrow(id) {
+    var x = document.getElementById("arrowBlog");
     if (x.className == "fas fa-chevron-down arrow") {
         x.classList.add("flip");
     } else {
         x.className = "fas fa-chevron-down arrow";
     }
-    var p = document.querySelectorAll(".hidePost");
-    var q = document.querySelectorAll(".unhidePost");
+    var p = document.querySelectorAll(".hideBlog");
+    var q = document.querySelectorAll(".unhideBlog");
     var j;
     for (j = 0; j < p.length; j++) {
-        p[j].className = "col-md-6 col-lg-6 unhidePost";
+        p[j].classList.remove("hideBlog");
+        p[j].classList.add("unhideBlog");
     }
     var k;
     for (k = 0; k < q.length; k++) {
-        q[k].className = "col-md-6 col-lg-6 hidePost";
+        q[k].classList.remove("unhideBlog");
+        q[k].classList.add("hideBlog");
     }
     if (q.length > 0) {
         $('html,body').animate({scrollTop: $("#blog").offset().top},'fast'); 

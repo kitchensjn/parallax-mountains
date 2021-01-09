@@ -20,7 +20,7 @@ p {
 }
 
 .link:hover {
-    color: #3379b7;
+    color: #337ab7;
 }
 
 .cat {
@@ -46,7 +46,7 @@ p {
 }
 
 .arrow:hover {
-    color: #3379b7;
+    color: #337ab7;
 }
 
 .flip {
@@ -60,6 +60,7 @@ p {
     padding: 75px 10% 75px 10%;
     position: relative;
     height: auto;
+    overflow: hidden;
 }
 
 
@@ -94,7 +95,7 @@ p {
 }
 
 .activePage:link {
-    color: #3379b7;
+    color: #337ab7;
     text-decoration: none;
 }
 
@@ -109,7 +110,7 @@ p {
 }
 
 .menuBurger:hover {
-    color: #3379b7;
+    color: #337ab7;
     text-decoration: none;
 }
 
@@ -124,12 +125,12 @@ p {
 }
 
 .menuPage:hover {
-    color: #3379b7;
+    color: #337ab7;
     text-decoration: none;
 }
 
 .activePage {
-    color: #3379b7;
+    color: #337ab7;
     pointer-events: none;
     cursor: default;
 }
@@ -152,8 +153,13 @@ p {
 }
 
 @media screen and (max-width: 991px) {
-    #placeholderPost {
+    .placeholder {
         display: none;
+        padding: 0px;
+    }
+    
+    .placeholder .card {
+        cursur: initial;
     }
 }
 
@@ -179,7 +185,7 @@ p {
         text-align: left;
     }
     .topnav.responsive .menuPage:hover {
-        background-color: #3379b7;
+        background-color: #337ab7;
         color: #333333;
     }
     .contactBar .infoHide {
@@ -196,7 +202,7 @@ p {
 }
   
 .iconLink:hover {
-    color: #3379b7;
+    color: #337ab7;
 }
 
 
@@ -275,23 +281,23 @@ p {
 
 
 /* projects */
-#projects {
-    background-color: #BBBBBB;
+#projects .post {
+    padding: 0px;
 }
 
-#projects .card {
+#projects .post .card {
     height: 200px;
     border-radius: 5px;
     margin: 10px 10px;
 }
 
-#projects .card .overlay .content .desc{
+#projects .post .card .overlay .content .desc{
     color: #FFFFFF;
     text-align: justify;
     display: none;
 }
 
-#projects .card .overlay {
+#projects .post .card .overlay {
     position: relative;
     width: 100%;
     height: 100%;
@@ -299,54 +305,47 @@ p {
     border-radius: 5px;
 }
 
-#projects .card:hover .overlay {
+#projects .post .card:hover .overlay {
     background-color: rgba(51,51,51,1);
 }
 
-#projects .card:hover .overlay .content .desc{
+#projects .post .card:hover .overlay .content .desc{
     display: block;
     margin: 0px;
     color: #BBBBBB;
 }
 
-#projects .card:hover .overlay .content .name{
+#projects .post .card:hover .overlay .content .name{
     display: none;
 }
 
-.hideProject {
+.hideProjects {
     display: none;
 }
 
-.unhideProject {
-    display: block;
-}
-
-.hidePost {
-    display: none;
-}
-
-.unhidePost {
+.unhideProjects {
     display: block;
 }
 
 
 
 /* Blog */
-#blog {
-    background-color: #FFFFFF;
+#blog .post {
+    padding: 0px;
 }
 
-#blog .post {
+#blog .post .card {
     border-radius: 5px;
     padding: 0px;
     margin: 10px;
+    height: 400px;
 }
 
-#blog .post:hover {
+#blog .post .card:hover {
     cursor: pointer;
 }
 
-#blog .post .postimg .info {
+#blog .post .card .postimg .info {
     padding: 10px 10px 15px 10px;
     background-color: #333333;
     border-radius: 0px 0px 5px 5px;
@@ -356,21 +355,21 @@ p {
     width: 100%;
 }
 
-#blog .post .postimg .info .title {
+#blog .post .card .postimg .info .title {
     font-weight: bold;
     margin-bottom: 0px;
     text-align: center;
     color: #BBBBBB;
 }
 
-#blog .post .postimg .info .date {
+#blog .post .card .postimg .info .date {
     font-size: 15px;
     text-align: center;
     color: #BBBBBB;
     margin-bottom: 10px;
 }
 
-#blog .post .postimg .info .desc {
+#blog .post .card .postimg .info .desc {
     margin: 10px 0px;
     text-align: justify;
     font-size: 15px;
@@ -381,31 +380,31 @@ p {
     color: #BBBBBB;
 }
 
-#blog .post .postimg .info .cat {
+#blog .post .card .postimg .info .cat {
     text-align: center;
 }
 
-#blog .post .postimg .info .cat .background {
+#blog .post .card .postimg .info .cat .background {
     display: inline-block;
     border-radius: 5px;
     background-color: #BBBBBB;
     margin: 2px 0px;
 }
 
-#blog .post .postimg .info .cat .background .skill {
+#blog .post .card .postimg .info .cat .background .skill {
     color: #333333;
     margin: 3px;
     font-size: 10px;
 }
 
-#blog .post .postimg {
+#blog .post .card .postimg {
     height: 400px;
     width: 100%;
     border-radius: 5px;
     position: relative;
 }
 
-#blog .post .postimg .overlay {
+#blog .post .card .postimg .overlay {
     position: relative;
     width: 100%;
     height: 100%;
@@ -414,10 +413,17 @@ p {
     display: none;
 }
 
-#blog .post:hover .postimg .overlay {
+#blog .post .card:hover .postimg .overlay {
     display: block;
 }
 
+.hideBlogs {
+    display: none;
+}
+
+.unhideBlogs {
+    display: block;
+}
 
 
 

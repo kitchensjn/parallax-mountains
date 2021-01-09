@@ -32,7 +32,7 @@
 
     {% assign value = site.projects.size | modulo:2 %}
     {% if value != 0 %}
-        {% if site.blog.size > 2 %}
+        {% if site.projects.size > 2 %}
             <div id="placeholderPost" class="col-md-6 col-lg-6 hideProject" style="padding: 0px;">
         {% else %}
             <div id="placeholderPost" class="col-md-6 col-lg-6 hideProject" style="padding: 0px;">
