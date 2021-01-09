@@ -3,7 +3,7 @@
 <div id="blog" class="section">
     <h1 style="text-align: center;">Blog</h1>
     
-    {% assign sorted_posts = site.blog | sort: 'date' | reverse %}
+    {% assign sorted_posts = site.projects | sort: 'date' | reverse %}
     {% for post in sorted_posts %}
         {% if forloop.index <= to_show %}
             <div class="col-md-6 col-lg-6" style="padding: 0px;">
