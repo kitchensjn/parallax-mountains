@@ -275,23 +275,23 @@ p {
 
 
 /* projects */
-#projects {
+#horror {
     background-color: #BBBBBB;
 }
 
-#projects .card {
+#horror .card {
     height: 200px;
     border-radius: 5px;
     margin: 10px 10px;
 }
 
-#projects .card .overlay .content .desc{
+#horror .card .overlay .content .desc{
     color: #FFFFFF;
     text-align: justify;
     display: none;
 }
 
-#projects .card .overlay {
+#horror .card .overlay {
     position: relative;
     width: 100%;
     height: 100%;
@@ -299,17 +299,17 @@ p {
     border-radius: 5px;
 }
 
-#projects .card:hover .overlay {
+#horror .card:hover .overlay {
     background-color: rgba(51,51,51,1);
 }
 
-#projects .card:hover .overlay .content .desc{
+#horror .card:hover .overlay .content .desc{
     display: block;
     margin: 0px;
     color: #BBBBBB;
 }
 
-#projects .card:hover .overlay .content .name{
+#horror .card:hover .overlay .content .name{
     display: none;
 }
 
