@@ -18,9 +18,9 @@ publications:
 
 categories:
   projects:
-    rows_to_show: 2
-    posts_per_row: 2
+    rows_to_show: 1
+    posts_per_row: 3
   blog:
     rows_to_show: 1
-    posts_per_row: 2
+    posts_per_row: 3
 ---
