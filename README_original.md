@@ -1,40 +1,4 @@
-# Parallax-Mountains
-
-*Parallax-Mountains is a mobile friendly theme designed for static personal porfolio websites and blogs, created with Jekyll and hosted through GitHub Pages.*
-
-Parallax-Mountains was first built as the template for my personal website (www.james-kitchens.com). By default, this theme includes a unique homepage with links to user's social media sites, a short biography, a section for recent research projects, and the ability to categorize blog posts.
-
-I am always open to feedback or ways to improve this theme. Submit an [Issue](https://github.com/kitchensjn/parallax-mountains/issues/new/choose) or Pull Request with any of your ideas!
-
-## Installation
-
-The easiest method for installing Parallax-Mountains is to access it through the GitHub. This requires you to have an account before you can proceed; if you don't yet have one, create it [HERE](https://github.com/join). Next, follow the steps below to get you started:
-
-### Fork This Repo
-
-In the top right corner of this repository, click the Fork button. This will copy the repository into your account, so that you can customize it to your needs.
-
-### Rename The Repo (Optional)
-
-Within Settings, you can rename the repository to whatever you would like. By default, the repository name will appear within your URL (ex. https://kitchensjn.github.io/parallax-mountains). If you name the repository [username].github.io, you will be able to access it without the additional repository name.
-
-### Set Up GitHub Pages
-
-While you are in Settings, scroll down to nearly the bottom of the page and locate the GitHub Pages section. Set the Source to the 'master' branch and click Save. After a minute, refresh the page, scroll back to the GitHub Pages section, and your website's URL will be clickable.
-
-
-**I am in the process of making this theme accessible through rubygems and GitHub remote_themes.**
-
-
-## Usage
-
-Parallax-Mountains
-
-
-
-
-
-
+# parallax-mountains
 
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
