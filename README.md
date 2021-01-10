@@ -30,9 +30,9 @@ While you are in Settings, scroll down to nearly the bottom of the page and loca
 
 I've provided some default information and files from my website to fill out the theme, but you will want to make the site your own!
 
-First, open up the _config.yml file. This contains information about you and your site. As you look into customization, information in the _config.yml will be able to be accessed throughout the various pages of your site. Information is written using YAML syntax. *Warning*: I highly recommend using quotes around your information as it will fail if you use special characters outside of quotes.
+First, open up the _config.yml file. This contains information about you and your site. As you look into customization, information in the _config.yml will be able to be accessed throughout the various pages of your site. Information is written using YAML syntax and the formatting must be preserved. *Warning*: I highly recommend using quotes around your information as it will fail if you use special characters outside of quotes.
 
-Next, the index.md file contains the informatio
+Next, the index.md file contains the information specifically for the homepage. "---" denotes Jekyll Front Matter, or information that can be called by name from the page.
 
 
 
