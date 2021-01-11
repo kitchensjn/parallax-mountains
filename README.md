@@ -6,6 +6,7 @@ Parallax-Mountains was first built as the template for my personal website (www.
 
 I am always open to feedback or ways to improve this theme. Submit an [Issue](https://github.com/kitchensjn/parallax-mountains/issues/new/choose) or Pull Request with any of your ideas!
 
+
 ## Installation
 
 The easiest method for installing Parallax-Mountains is to access it through the GitHub. This requires you to have an account before you can proceed; if you don't yet have one, create it [HERE](https://github.com/join). Next, follow the steps below to get you started:
@@ -22,8 +23,7 @@ Within Settings, you can rename the repository to whatever you would like. By de
 
 While you are in Settings, scroll down to nearly the bottom of the page and locate the GitHub Pages section. Set the Source to the 'master' branch and click Save. After a minute, refresh the page, scroll back to the GitHub Pages section, and your website's URL will be clickable.
 
-
-**I am in the process of making this theme accessible through rubygems and GitHub remote_themes.**
+*I am in the process of making this theme accessible through RubyGems and GitHub Pages remote_themes.*
 
 
 ## Usage
@@ -32,59 +32,25 @@ I've provided some default information and files from my website to fill out the
 
 First, open up the _config.yml file. This contains information about you and your site. As you look into customization, information in the _config.yml will be able to be accessed throughout the various pages of your site. Information is written using YAML syntax and the formatting must be preserved. *Warning*: I highly recommend using quotes around your information as it will fail if you use special characters outside of quotes.
 
-Next, the index.md file contains the information specifically for the homepage. "---" denotes Jekyll Front Matter, or information that can be called by name from the page.
+Next, the index.md file contains the information specifically for the homepage. "---" denotes Jekyll Front Matter, or information that can be called by name from the page. Fill out this Front Matter with your own information. Some specifics regarding formatting:
+
+- **bio:** the "|" symbol denotes that the theme should separate paragraphs within this section
+- **skills:** each row in the skills section represents a grouping of skills, which will be displayed in a line.
+- **publications:** should be written in reverse chronological order. A number will be added for each publications, consistent with standard citation methods.
+- **categories:** these are your post categories, currently set to projects and blog posts, but could be expanded as needed
+
+Categories are how Parallax-Mountains organizes the site's posts. Each category is stored in its own directory within the root directory of the site. Each category will have its own section on your homepage with each post generating an associated card in that section. The style of these cards is determine by the template set within the Front Matter of the index.md file. For an example of how to set up a post category, see either the projects or blog directory. You can write posts as a Markdown file. Front matter is specific to each category, which will be used to build the heading of each post. The written content of the post is the contained within the content of the Markdown file.
 
 
+## Further Customization
 
+If you are interested in further customization of individual elements in your site, head to the _includes directory, which contains templates for each section. The _sass directory contains stylings for every element.
 
-
-
-
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
-
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "parallax-mountains"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: parallax-mountains
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install parallax-mountains
-
-## Usage
-
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kitchensjn/parallax-mountains. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `parallax-mountains.gemspec` accordingly.
 
 ## License
 
