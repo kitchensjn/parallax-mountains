@@ -11,7 +11,7 @@ I am always open to feedback or ways to improve this theme. Submit an [Issue](ht
 
 ## Installation
 
-The easiest method for installing Parallax-Mountains is to access it through the GitHub. This requires you to have an account before you can proceed; if you don't yet have one, create it [HERE](https://github.com/join). Next, follow the steps below to get you started:
+The easiest method for installing Parallax-Mountains is to access it through GitHub. This requires you to have an account before you can proceed; if you don't yet have one, create it [HERE](https://github.com/join). Next, follow the steps below to get you started:
 
 ### Fork This Repo
 
