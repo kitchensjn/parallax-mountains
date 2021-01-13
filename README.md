@@ -3,7 +3,6 @@
 *Parallax-Mountains is a mobile friendly theme designed for static personal porfolio websites and blogs, created with Jekyll and hosted through GitHub Pages.*
 
 ![Parallax-Mountains-Desktop](screenshot-desktop.png)
-![Parallax-Mountains-Mobile](screenshot-mobile.png)
 
 Parallax-Mountains was first built as the template for my personal website (www.james-kitchens.com). By default, this theme includes a unique homepage with links to user's social media sites, a short biography, a section for recent research projects, and the ability to categorize blog posts.
 
