@@ -1,3 +1,6 @@
+---
+---
+
 let numberPoints;
 
 function setup() {
@@ -45,9 +48,9 @@ function draw() {
   }
   vertex(width, height);
   endShape();
-  
-  fill(51,122,183,255);
-  stroke(51,122,183);
+
+  fill("{{site.theme_color}}");
+  stroke("{{site.theme_color}}");
   beginShape();
   vertex(0, height);
   for (var x = 0; x <= numberPoints; x++) {
@@ -81,10 +84,4 @@ function draw() {
   }
   vertex(width, height);
   endShape();
-  
-  //let fps = frameRate();
-  //fill(0);
-  //stroke(0);
-  //textSize(50);
-  //text("FPS: " + fps.toFixed(2), 10, height - 10);
 }

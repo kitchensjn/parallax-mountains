@@ -1,8 +1,9 @@
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>James Kitchens</title>
+    <title>{{ site.name }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/logo/JK.ico' | relative_url }}">
     <script src="https://kit.fontawesome.com/b53b88607b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
@@ -14,7 +15,7 @@
     {% if page.layout == 'home' %}
         <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
         <script src="{{ '/assets/scripts/home.js' | relative_url}}"></script>
-        <script src="{{ '/assets/scripts/perlinMountains.js' | relative_url}}"></script>
+        <script src="{{ '/assets/scripts/soundwave.js' | relative_url}}"></script>
     {% endif %}
 
 </head>

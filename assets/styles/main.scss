@@ -2,3 +2,66 @@
 ---
 
 @import 'parallax-mountains';
+
+a {
+    color: {{ site.theme_color }};
+}
+
+a:hover {
+    color: {{ site.theme_color }};
+}
+
+.link:hover {
+    color: {{ site.theme_color }};
+}
+
+.arrow:hover {
+    color: {{ site.theme_color }};
+}
+
+.activePage:link {
+    color: {{ site.theme_color }};
+}
+
+.menuBurger:hover {
+    color: {{ site.theme_color }};
+}
+
+.menuPage:hover {
+    color: {{ site.theme_color }};
+}
+
+.activePage {
+    color: {{ site.theme_color }};
+}
+
+.logo {
+    color: {{ site.theme_color }};
+}
+
+@media screen and (max-width: 868px) {
+    .topnav.responsive .menuPage:hover {
+        background-color: {{ site.theme_color }};
+    }
+}
+
+.iconLink:hover {
+    color: {{ site.theme_color }};
+}
+
+#blog .post .card .postimg .overlay {
+    background-color: {{ site.theme_color }};
+}
+
+.highlight .na {
+    font-weight: bold;
+    color: {{ site.theme_color }};
+}
+
+.highlight .nl {
+    color: {{ site.theme_color }};
+}
+
+.highlight .bp { 
+    color: {{ site.theme_color }};
+}

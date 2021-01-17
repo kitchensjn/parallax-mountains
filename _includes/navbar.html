@@ -1,22 +1,28 @@
 <div class="topnav" id="myTopnav">
     
-    <a class="menuPage" id="Logo" href="{{ '/#home' | relative_url }}" style="padding:12px 16px 8px 16px;">
-        <img class="logo" src="{{ '/assets/logo/JK.png' | relative_url }}" alt="JK_logo">
-    </a>
-    
     {% if page.layout == 'home' %}
-        <a class="menuPage activePage" id="Home" href="{{ '/#home' | relative_url }}">Home</a>
+        <a class="menuPage" id="Logo" href="javascript:void(0);" onclick="goTo('#home')">
+            <i class="fas fa-mountain fa-lg logo" title="{{ site.name }}"></i>
+        </a>
+        <a class="menuPage activePage" id="Home" href="javascript:void(0);" onclick="goTo('#home')">Home</a>
+        <a class="menuPage" id="Bio" href="javascript:void(0);" onclick="goTo('#bio')">Bio</a>
+        {% for category in site.categories %}
+            <a class="menuPage" id="{{ category[0] | capitalize }}" href="javascript:void(0);" onclick="goTo( '{{ '#' | append: category[0] }}' )">{{ category[0] | capitalize }}</a>
+        {% endfor %}
     {% else %}
+        <a class="menuPage" id="Logo" href="{{ '/#home' | relative_url }}">
+            <i class="fas fa-mountain fa-lg logo" title="{{ site.name }}"></i>
+        </a>
         <a class="menuPage" id="Home" href="{{ '/#home' | relative_url }}">Home</a>
+        <a class="menuPage" id="Bio" href="{{ '/#bio' | relative_url }}">Bio</a>
+        {% for category in site.categories %}
+            <a class="menuPage" id="{{ category[0] | capitalize }}" href="{{ '/#' | append: category[0] | relative_url }}">{{ category[0] | capitalize }}</a>
+        {% endfor %}
     {% endif %}
-
-    <a class="menuPage" id="Bio" href="{{ '/#bio' | relative_url }}">Bio</a>
     
-    {% for category in site.categories %}
-        <a class="menuPage" id="{{ category[0] | capitalize }}" href="{{ '/#' | append: category[0] | relative_url }}">{{ category[0] | capitalize }}</a>
-    {% endfor %}
-    
-    <a class="menuPage" id="CV" href="{{ '/assets/CV/KitchensJames_CV.pdf' | relative_url }}" target="_blank">CV</a>
+    {% if site.social_links.CV.link %}
+        <a class="menuPage" id="CV" href="{{ site.social_links.CV.link | relative_url }}" target="_blank">CV</a>
+    {% endif %}
     
     <a href="javascript:void(0);" class="menuBurger icon" onclick="hamburger()">
         <i class="fa fa-bars"></i>

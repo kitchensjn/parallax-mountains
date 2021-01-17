@@ -20,7 +20,6 @@ window.addEventListener('scroll', function(event){
         activePage.classList.add("activePage");
     }
     if(window.pageYOffset > document.getElementById("blog").offsetTop - 300) {
-        console.log("yes");
         $(".menuPage").removeClass("activePage");
         var activePage = document.getElementById("Blog");
         activePage.classList.add("activePage");

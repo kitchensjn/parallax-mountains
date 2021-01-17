@@ -23,6 +23,6 @@ categories:
     template: "cards/projects.html"
   blog:
     rows_to_show: 1
-    posts_per_row: 2
+    posts_per_row: 3
     template: "cards/blog.html"
 ---

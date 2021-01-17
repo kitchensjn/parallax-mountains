@@ -9,27 +9,13 @@ function hamburger() {
     }
 }
 
-function goToHome(id){
+function goTo(id){
     var x = document.getElementById("myTopnav");
     x.className = "topnav";
     document.getElementById("Logo").classList.remove("inactiveLink");
-    $('html,body').animate({scrollTop: $("#home").offset().top},'slow');
-}
-function goToBio(id){
-    var x = document.getElementById("myTopnav");
-    x.className = "topnav";
-    document.getElementById("Logo").classList.remove("inactiveLink");
-    $('html,body').animate({scrollTop: $("#bio").offset().top-30},'slow');
-}
-function goToProjects(id){
-    var x = document.getElementById("myTopnav");
-    x.className = "topnav";
-    document.getElementById("Logo").classList.remove("inactiveLink");
-    $('html,body').animate({scrollTop: $("#projects").offset().top},'slow');
-}
-function goToBlog(id){
-    var x = document.getElementById("myTopnav");
-    x.className = "topnav";
-    document.getElementById("Logo").classList.remove("inactiveLink");
-    $('html,body').animate({scrollTop: $("#blog").offset().top},'slow');
+    if (id == "#bio") {
+        $('html,body').animate({scrollTop: $(id).offset().top-30},'slow');
+    } else {
+        $('html,body').animate({scrollTop: $(id).offset().top},'slow');
+    }
 }
