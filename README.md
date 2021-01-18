@@ -51,7 +51,7 @@ If you are interested in further customization of individual elements in your si
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kitchensjn/parallax-mountains. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kitchensjn/parallax-mountains. If you develop any animations or cards that you would like to share, you can submit them as a pull request and I will add them to the theme for others to use. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
