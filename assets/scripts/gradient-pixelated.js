@@ -17,15 +17,15 @@ function draw() {
     //windowResized();
     background('rgba(0,0,0,0)');
 
-    var pixelWidth = 17
-    var pixelHeight = 17
+    var pixelWidth = 5
+    var pixelHeight = 5
 
     for (var y=0; y<=height/pixelHeight; y++){
         for (var x=0; x<=width/pixelWidth; x++) {
-            //if (y > 0.01*(x-(width/pixelWidth)/2)**2+(height/pixelHeight)/2) {
-            //    continue
-            //}
-            if (random(1) > (y*y)/250) {
+            if (y > 0.01*(x-(width/pixelWidth)/2)**2+(height/pixelHeight)/2) {
+                continue
+            }
+            if (random(1) > (y*y)/1000) {
                 if (random(1) > 0.95) {
                     if (random(1) > 0.5) {
                         fill("{{site.theme_color}}");
