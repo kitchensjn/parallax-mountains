@@ -1,17 +1,28 @@
 <div id="bio" class="section">
+    {% if page.headshot.size > 0 %}
+        <div style="text-align: center; margin-bottom: 60px;">
+            <img src="{{ page.headshot | relative_url}}" width="300px" style="border-radius: 50%;">
+        </div>
+    {% endif %}
     {% if page.bio.size > 0 %}
         {{ page.bio | strip | markdownify }}
     {% endif %}
     {% if page.skills.size > 0 %}
         <div style="margin: 50px 0px;">
             {% for skillset in page.skills %}
-                <div class="cat" style="text-align: center; margin: 2.5px 0px;">
-                    {% for skill in skillset %}
-                        <div class="background">
-                            <p class="skill">{{ skill }}</p>
-                        </div>
-                    {% endfor %}
-                </div>
+                {% if forloop.first %}
+                    <div class="cat" style="text-align: center; margin: 0px 0px 2.5px 0px;">
+                {% elsif forloop.last %}
+                    <div class="cat" style="text-align: center; margin: 2.5px 0px 0px 0px;">
+                {% else %}
+                    <div class="cat" style="text-align: center; margin: 2.5px 0px;">
+                {% endif %}
+                        {% for skill in skillset %}
+                            <div class="background">
+                                <p class="skill">{{ skill }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
             {% endfor %}
         </div>
     {% endif %}

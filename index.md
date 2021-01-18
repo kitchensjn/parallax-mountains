@@ -1,6 +1,8 @@
 ---
 layout: home
 
+headshot: assets/headshot/KitchensJames_Headshot.jpg
+
 bio: |
   Hi, my name is James Kitchens, and I am a Business Consultant with Venebio Group, LLC, aiding in the analysis of clinical and demographic studies. In December 2019, I graduated from Warren Wilson College in Asheville, North Carolina, where I earned a B.S. in Biology and B.S. in Chemistry. While in undergraduate, I worked in the Warren Wilson College Plant Physiology and Genetics Laboratory as a Research Assistant on projects focused around the conservation of human-impacted species in the United States. I am interested in population biology and the impacts of geography on movement and population structure. I enjoy using computational research as a tool for better understanding the natural world.
   
