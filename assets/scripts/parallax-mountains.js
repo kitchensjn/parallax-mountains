@@ -17,7 +17,7 @@ function windowResized() {
 
 function draw() {
   windowResized();
-  background(51);
+  background('rgba(0,0,0,0)');
 
   if (width > 1000) {
     numberPoints = 750;
